@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.NavContainer {
+    position: fixed;
+    top: 0;
+    background: var(--background-gradient);
+    max-width: 100%;
+    width: 100vw;
+    height: 90px;
+    z-index: 1000;
+}
+
+.container {
+
+}
+
+@keyframes colorTransition {
+    0% {color: var(--text1);}
+    12.5% {color: var(--text2);}
+    25% {color: var(--text3);}
+    37.5% {color: var(--text4);}
+    50% {color: var(--text5);}
+    62.5% {color: var(--text6);}
+    75% {color: var(--text7);}
+    87.5% {color: var(--text8);}
+    100% {color: var(--text1);}
+}
+
+.text1{
+    margin: 10px 0px 0px 10px;
+    padding: 20px;
+    color: var(--text1);
+    font-size: 2.5rem;
+    display: flex;
+    text-align: right;
+    font-weight: 700;
+    animation: colorTransition ease 5s infinite
+}
+
+/* .picture {
+    display: flex;
+} */
+
+.picture {
+    display: flex;
+}
+
+.pic {
+    margin: 33px 0px 0px 10px;
+}
+
+.btn {
+    background: transparent;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.btn:hover {
+    background: var(--button);
+}
+
+.mobileMenuBtn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text1);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        background: var(--background-gradient);
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .menu.open{
+        display: flex;
+    }
+
+    .mobileMenuBtn{
+        display: block;
+    }
+
+    .text1{
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        color: #fff;
+        font-size: 1rem;
+
+    }
+}
