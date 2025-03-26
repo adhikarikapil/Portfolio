@@ -6,7 +6,7 @@ body {
 }
 
 .NavContainer {
-  margin: 10px;
+  padding: 10px;
   position: fixed;
   top: 0;
   background: var(--background-gradient);
@@ -70,7 +70,7 @@ body {
 }
 
 .last {
-  margin: 50px 0px 0px 0px;
+  margin: 70px 0px 0px 0px;
   display: flex;
   justify-content: right;
   width: 30vw;
@@ -86,6 +86,11 @@ body {
 .btn:hover {
   transform: scale(1.15);
   background: var(--button);
+}
+
+.btn:active {
+  transform: scale(0.8);
+  transition: 0.3s ease;
 }
 
 .mobileMenuBtn {
@@ -131,4 +136,9 @@ body {
     color: #fff;
     font-size: 1rem;
   }
+
+  .last {
+    margin-top: 35px;
+  }
+  
 }

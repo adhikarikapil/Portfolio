@@ -39,7 +39,7 @@ function Navbar() {
             {isOpen ? <X size={28} /> : <LucideMenu size={28} />}
           </button>
           <div className="last">
-            <img src={MyImage} id="pic" className="size-30 rounded-full"></img>
+            <img src={MyImage} id="pic" className="size-20 rounded-full"></img>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>
         </div>
