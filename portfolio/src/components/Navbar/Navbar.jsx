@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Images
 import MyImage from "../../assets/kapil.png";
@@ -12,10 +12,23 @@ import { X, Menu as LucideMenu, ArrowDownFromLine } from "lucide-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
-      <div className="NavContainer">
+      <div className={`NavContainer ${visible ? 'navbar-visible' : 'navbar-hidden'}`}>
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex shrink-0 items-center">
             <div className="picture">
@@ -28,7 +41,6 @@ function Navbar() {
           {/* Desktop View */}
           <HeadMenu as="div" className={`menu ${isOpen ? "open" : ""}`}>
             <MenuButton className="btn">ABOUT</MenuButton>
-            <MenuButton className="btn">EXPERIENCE</MenuButton>
             <MenuButton className="btn">SKILLS</MenuButton>
             <MenuButton className="btn">EDUCATION</MenuButton>
             <MenuButton className="btn">PROJECTS</MenuButton>

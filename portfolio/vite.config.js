@@ -8,6 +8,6 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // Bind to all network interfaces
     port: 5173,
-    allowedHosts: ['.ngrok.io', '.ngrok-free.app', 'localhost'],
+    allowedHosts: ['.ngrok.io', '.ngrok-free.app', 'localhost', 'skeotaku.loca.lt'],
   }
 })
