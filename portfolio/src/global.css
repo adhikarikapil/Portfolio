@@ -21,6 +21,8 @@
     --button: linear-gradient(to bottom right, #f626af, #8228ec);
 }
 
+
+
 @media(prefers-color-scheme: dark) {
     :root {
         --foreground-rgb: rgb(255, 255, 255);
@@ -31,7 +33,7 @@ body {
    background: var(--foreground);
 }
 
-/* body {
-    background: var(--foreground-rgb);
-    background-color: #0d1224;
-} */
+.container {
+    overflow: hidden;
+    width: 100vw;
+}

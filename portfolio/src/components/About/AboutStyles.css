@@ -91,6 +91,16 @@
     background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF)
 }
 
+.about-skill:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* .about-skill:active {
+    transform: scale(1);
+    transition: 0.3s;
+} */
+
 @media (max-width: 768px) {
   .about {
     margin: 150px 30px;

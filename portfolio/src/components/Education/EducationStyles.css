@@ -1,0 +1,46 @@
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 150px 50px;
+}
+
+.education-title {
+    position: relative;
+    z-index: 0;
+}
+
+.education-title h1 {
+    padding: 0px 30px;
+    font-size: 70px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.education-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+@media (max-width: 768px) {
+    .education {
+        margin: 150px 30px;
+    }
+
+    .education-title h1 {
+        padding: 0px 20px;
+        font-size: 45px;
+        font-weight: 500;
+    }
+
+    .education-title img {
+        right: 20px;
+        opacity: 0.8;
+    }
+}

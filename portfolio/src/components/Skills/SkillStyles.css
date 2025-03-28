@@ -63,9 +63,9 @@
   display: flex;
   gap: 2rem;
   position: absolute;
-  animation: scroll 30s linear infinite;
   padding: 0 100px;
   height: 120px;
+  animation: scroll 30s linear infinite;
   will-change: transform;
 }
 
@@ -151,11 +151,11 @@
 }
 
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(calc(-100% - 2rem));
+  100% {
+    transform: translateX(-50%);
   }
 }
 
