@@ -22,13 +22,17 @@ function Navbar() {
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
-      <div className={`NavContainer ${visible ? 'navbar-visible' : 'navbar-hidden'}`}>
+      <div
+        className={`NavContainer ${
+          visible ? "navbar-visible" : "navbar-hidden"
+        }`}
+      >
         <div className="relative flex h-16 items-center justify-between">
           <div className="flex shrink-0 items-center">
             <div className="picture">
@@ -40,10 +44,46 @@ function Navbar() {
 
           {/* Desktop View */}
           <HeadMenu as="div" className={`menu ${isOpen ? "open" : ""}`}>
-            <MenuButton className="btn">ABOUT</MenuButton>
-            <MenuButton className="btn">SKILLS</MenuButton>
-            <MenuButton className="btn">EDUCATION</MenuButton>
-            <MenuButton className="btn">PROJECTS</MenuButton>
+            <MenuButton
+              className="btn"
+              onClick={() =>
+                document
+                  .getElementById("about")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              ABOUT
+            </MenuButton>
+            <MenuButton
+              className="btn"
+              onClick={() =>
+                document
+                  .getElementById("skill")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              SKILLS
+            </MenuButton>
+            <MenuButton
+              className="btn"
+              onClick={() =>
+                document
+                  .getElementById("education")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              EDUCATION
+            </MenuButton>
+            <MenuButton
+              className="btn"
+              onClick={() =>
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              PROJECTS
+            </MenuButton>
           </HeadMenu>
 
           {/* Mobile View */}

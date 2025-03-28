@@ -1,39 +1,41 @@
 :root {
-    --foreground: #0d1224;
-    --background: #212e5c;
-    --background-gradient: radial-gradient( #212e5c, #0d1224 40%);
-    --foreground-rgb: rgb(211, 216, 232);
-    --border: conic-gradient(from 180deg at 50% 70%,
-      #f626af 0deg,
-      #8228ec 72.0000010728836deg,
-      #f626af 144.0000021457672deg,
-      #0025ba 216.00000858306885deg,
-      #f626af 288.0000042915344deg,
-      #fafafa 1turn);
-    --text1: #16f2b3;
-    --text2: #35DAAF;
-    --text3: #53C1AC;
-    --text4: #72A9A8;
-    --text5: #9091A4;
-    --text6: #AF79A0;
-    --text7: #CD609D;
-    --text8: #ec4899;
-    --button: linear-gradient(to bottom right, #f626af, #8228ec);
+  --foreground: #0d1224;
+  --background: #212e5c;
+  --background-border: #203A43;
+  --background-gradient: radial-gradient(#212e5c, #0d1224 40%);
+  --foreground-rgb: rgb(211, 216, 232);
+  --border: conic-gradient(
+    from 180deg at 50% 70%,
+    #f626af 0deg,
+    #8228ec 72.0000010728836deg,
+    #f626af 144.0000021457672deg,
+    #0025ba 216.00000858306885deg,
+    #f626af 288.0000042915344deg,
+    #fafafa 1turn
+  );
+  --text1: #16f2b3;
+  --text2: #35daaf;
+  --text3: #53c1ac;
+  --text4: #72a9a8;
+  --text5: #9091a4;
+  --text6: #af79a0;
+  --text7: #cd609d;
+  --text8: #ec4899;
+  --button: linear-gradient(to bottom right, #f626af, #8228ec);
+  --linear-gradient: linear-gradient(270deg, var(--text1), var(--text8));
 }
 
-
-
-@media(prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: rgb(255, 255, 255);
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: rgb(255, 255, 255);
+  }
 }
 
 body {
-   background: var(--foreground);
+  background: var(--foreground);
 }
 
 .container {
-    overflow: hidden;
-    width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
 }

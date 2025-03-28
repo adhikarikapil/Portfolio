@@ -9,7 +9,7 @@
 
 .hero img{
     margin-top: 150px;
-    height: 70vh;
+    height: 50vh;
 }
 
 .hero h1 {
@@ -17,7 +17,7 @@
 }
 
 .hero h1 span {
-    background: linear-gradient(270deg, var(--text1) 10%, var(--text8) 100%);
+    background: var(--linear-gradient);
     background-clip: text;
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
@@ -55,6 +55,10 @@
 .hero-action div:active {
     transform: scale(0.8);
     transition: 0.3s ease;
+}
+
+.hero-resume {
+    color: white;
 }
 
 @media (max-width: 768px) {

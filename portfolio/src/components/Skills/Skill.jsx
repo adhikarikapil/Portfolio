@@ -38,7 +38,7 @@ const skills = [
 
 function Skill() {
   return (
-    <div className="skills-section">
+    <div className="skills-section" id="skill">
       <h2>My Skills</h2>
       <div className="skills-container">
         <div className="skills-gradient-left" />
