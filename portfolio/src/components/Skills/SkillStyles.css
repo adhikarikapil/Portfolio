@@ -7,6 +7,7 @@
   margin: 2rem 0;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .skills-section h2 {
@@ -17,12 +18,15 @@
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
   text-align: center;
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
 .skills-container {
   position: relative;
   width: 100%;
-  height: 120px;
+  height: 140px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
@@ -32,7 +36,7 @@
   top: 0;
   width: 200px;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 }
 
@@ -49,8 +53,9 @@
 .skills-track {
   position: relative;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 140px;
+  display: flex;
+  align-items: center;
 }
 
 .skills-content {
@@ -59,11 +64,20 @@
   position: absolute;
   animation: scroll 30s linear infinite;
   padding: 0 100px;
+  height: 120px;
+}
+
+.skills-content:hover {
+  animation-play-state: paused;
 }
 
 .skill-item {
   flex: 0 0 auto;
   text-decoration: none;
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: center;
 }
 
 .skill-content {
@@ -80,11 +94,15 @@
   transition: all 0.3s ease;
   width: 100px;
   height: 100px;
+  position: relative;
+  z-index: 1;
+  transform-origin: center bottom;
 }
 
 .skill-content svg {
   color: var(--text1);
   transition: all 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(22, 242, 179, 0.3));
 }
 
 .skill-content span {
@@ -94,17 +112,32 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
 }
 
 .skill-content:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.1);
   background: var(--background-gradient);
   border-image: var(--border) 1;
   box-shadow: 0 0 20px rgba(22, 242, 179, 0.3);
+  z-index: 2;
 }
 
 .skill-content:hover svg {
   color: var(--text8);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px rgba(236, 72, 153, 0.5));
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(22, 242, 179, 0.5),
+                 0 0 20px rgba(22, 242, 179, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(236, 72, 153, 0.5),
+                 0 0 40px rgba(236, 72, 153, 0.3);
+  }
 }
 
 @keyframes scroll {
@@ -122,6 +155,18 @@
   }
 
   .skills-container {
+    height: 120px;
+  }
+
+  .skills-track {
+    height: 120px;
+  }
+
+  .skills-content {
+    height: 100px;
+  }
+
+  .skill-item {
     height: 100px;
   }
 
