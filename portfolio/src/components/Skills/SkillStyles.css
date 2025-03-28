@@ -65,10 +65,19 @@
   animation: scroll 30s linear infinite;
   padding: 0 100px;
   height: 120px;
+  animation-fill-mode: forwards;
 }
 
 .skills-content:hover {
   animation-play-state: paused;
+}
+
+.skills-content-wrapper {
+  display: flex;
+}
+
+.skills-content:nth-child(2) {
+  left: 100%;
 }
 
 .skill-item {
@@ -145,7 +154,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
