@@ -32,10 +32,14 @@ function About() {
 
           <Skill />
 
+        </div>
+      </div>
+      <div className="skill-container">
+
           <div className="about-skills">
             <div className="about-skill">
               <p>Linux</p>
-              <hr style={{ width: "90%" }} />
+              <hr style={{ width: "85%" }} />
             </div>
             <div className="about-skill">
               <p>HTML</p>
@@ -47,7 +51,7 @@ function About() {
             </div>
             <div className="about-skill">
               <p>JavaScript</p>
-              <hr style={{ width: "90%" }} />
+              <hr style={{ width: "85%" }} />
             </div>
             <div className="about-skill">
               <p>React</p>
@@ -67,7 +71,7 @@ function About() {
             </div>
             <div className="about-skill">
               <p>MySQL</p>
-              <hr style={{ width: "90%" }} />
+              <hr style={{ width: "85%" }} />
             </div>
             <div className="about-skill">
               <p>SQLite</p>
@@ -82,7 +86,6 @@ function About() {
               <hr style={{ width: "50%" }} />
             </div>
           </div>
-        </div>
       </div>
     </div>
   );
