@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutStyles.css";
+import Skill from "../Skills/Skill";
 import Theme from "../../assets/theme_pattern.svg";
 import Profile from "../../assets/profile.jpeg";
 
