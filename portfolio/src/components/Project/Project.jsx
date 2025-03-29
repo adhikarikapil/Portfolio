@@ -17,7 +17,7 @@ function Project() {
       <div className="project-map-container">
         {ProjectData.map((project, index) => {
           return (
-            <div className="project-format" id={index}>
+            <div className="project-format" key={index}>
               <div className="project-detail">
                 <div className="project-titles">
                   <h3>{project.w_no}.</h3>
