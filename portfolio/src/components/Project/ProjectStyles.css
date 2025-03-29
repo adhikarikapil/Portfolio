@@ -1,0 +1,153 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 150px 50px;
+}
+
+.project-heading {
+  position: relative;
+  z-index: 0;
+}
+
+.project-heading h1 {
+  padding: 0px 30px;
+  font-size: 70px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.project-heading img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.project-map-container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.project-format {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--background);
+  border-radius: 10px;
+  transition: 0.5s;
+  width: 50vw;
+  height: 70vh;
+  justify-content: center;
+}
+
+.project-format:hover {
+    background: var(--background);
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.project-format:active{
+    transform: scale(0.8);
+}
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-titles {
+  display: flex;
+  gap: 340px;
+  padding: 25px;
+}
+
+.project-titles h3 {
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+}
+
+.project-titles h1 {
+  font-size: 35px;
+  font-weight: 600;
+  background: linear-gradient(270deg, var(--text1), var(--text8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-img img {
+  width: 50vw;
+  height: 500px;
+}
+
+.button {
+  padding: 10px 20px;
+  background: var(--button);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.15);
+  background: var(--background);
+} 
+
+@media (max-width: 768px) {
+  .project-container {
+    margin: 150px 30px;
+    gap: 100px;
+  }
+
+  .project-heading h1 {
+    padding: 0px 20px;
+    font-size: 45px;
+  }
+
+  .project-heading img {
+    top: 2px;
+    opacity: 0.8;
+  }
+
+  .project-format {
+    height: 300px;
+    width: 80vw;
+    background: var(--background);
+  }
+
+  .project-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 0;
+    gap: 10px;
+  }
+
+  .project-titles{
+    padding: 0;
+    margin: 0;
+    gap: 60px;
+  }
+
+  .project-titles h3 {
+    font-size: 34px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .project-titles h1 {
+    font-size: 25px;
+  }
+
+  .project-img img {
+    width: 74vw;
+    height: 200px;
+  }
+}

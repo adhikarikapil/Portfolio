@@ -49,7 +49,7 @@
 
 .hero-action div:hover {
     transform: scale(1.15);
-    background: var(--button);
+    background: var(--button-hover);
 }   
 
 .hero-action div:active {

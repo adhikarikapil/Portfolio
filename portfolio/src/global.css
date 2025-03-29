@@ -22,6 +22,7 @@
   --text7: #cd609d;
   --text8: #ec4899;
   --button: linear-gradient(to bottom right, #f626af, #8228ec);
+  --button-hover: #212e5c;
   --linear-gradient: linear-gradient(270deg, var(--text1), var(--text8));
 }
 
