@@ -9,7 +9,7 @@ function Hero() {
   };
 
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
       <img src={Profile} alt="KapilProfile" className="rounded-full" />
       <h1>
         <span>I'm Kapil Adhikari,</span>
@@ -20,8 +20,19 @@ function Hero() {
         Nepal with 1 year of experience.
       </p>
       <div className="hero-action">
-        <div className="hero-connect">Connect With Me</div>
-        <div className="hero-resume" onClick={handleLinkClick}>My Resume</div>
+        <div
+          className="hero-connect"
+          onClick={() =>
+            document
+              .getElementById("contact-me")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Connect With Me
+        </div>
+        <div className="hero-resume" onClick={handleLinkClick}>
+          My Resume
+        </div>
       </div>
     </div>
   );

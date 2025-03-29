@@ -62,6 +62,7 @@
 
 .project-titles {
   display: flex;
+  align-items: center;
   gap: 340px;
   padding: 25px;
 }
